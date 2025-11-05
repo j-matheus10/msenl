@@ -1,0 +1,20 @@
+Categoría: Bracketing
+Método: Bisección ( búsqueda binaria)
+Bibliografía: https://math.libretexts.org/Workbench/Numerical_Methods_with_Applications_(Kaw)/3%3A_Nonlinear_Equations/3.03%3A_Bisection_Methods_for_Solving_a_Nonlinear_Equation
+
+
+Método: False position
+Bibliografía: https://byjus.com/maths/false-position-method/
+
+Categoría: Abiertos
+Método: fixed point (Punto fijo)
+Bibliografía: https://byjus.com/maths/fixed-point-iteration/
+
+Método: Newton Raphson
+Bibliografía: https://personal.math.ubc.ca/~anstee/math104/newtonmethod.pdf –- https://www.geeksforgeeks.org/engineering-mathematics/newton-raphson-method/
+
+Método: Secant
+Bibliografía: https://www.geeksforgeeks.org/engineering-mathematics/secant-method-of-numerical-analysis/
+
+Método: Brent
+Bibliografía: https://mathsfromnothing.au/brents-method/
