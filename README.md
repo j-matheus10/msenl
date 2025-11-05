@@ -1,32 +1,42 @@
-# Proyecto de Solución [Nombre de tu Proyecto]
+# Proyecto de Solución [La Masia]
 
-Este repositorio contiene la solución para [Nombre de la Tarea].
+Este repositorio contiene la solución para [Hallar raices de ecuaciones no lineales y solucionar sistemas de ecuaciones no lineales].
 
 ## 📦 Instalación
 
-Para correr estas demos, solo necesitas clonar el repositorio y...
-(explica si hay que instalar algo, ej. `pip install pandas`)
-
+Para correr estas demos...
 ---
 
 ## 🚀 Demos de Métodos
 
 A continuación se encuentran los notebooks de demostración para cada método solicitado.
 
-### 1. Método [Nombre del Método 1]
+### 1. Método [Bisección (Búsqueda Binaria)]
 
-Este método resuelve [explicación breve].
+Este método...
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_1.ipynb)
 
-### 2. Método [Nombre del Método 2]
+### 2. Método [False position]
 
-Este método optimiza [explicación breve].
+Este método...
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_2.ipynb)
 
-### 3. Método [Nombre del Método 3]
+### 3. Método [Fixed Point]
 
-Este método predice [explicación breve].
+Este método...
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_3.ipynb)
+
+### 4. Método [Newton Raphson]
+
+Este método...
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_4.ipynb)
+
+### 5. Método [Secant]
+
+Este método...
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_5.ipynb)
