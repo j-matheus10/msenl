@@ -7,26 +7,36 @@ Este repositorio presenta una biblioteca en Python, programada bajo el paradigma
 Todas las demostraciones están diseñadas para ejecutarse directamente en Google Colab, por lo que no se requiere instalación local
 ---
 ## ⚙️ Uso Básico de la Biblioteca
-Cada método está encapsulado en su propia clase Solver. Para utilizarlos, simplemente instancie la clase correspondiente y llame al método .solve()
-Ejemplo (usando Newton-Raphson):
 
-# 1. Importar las clases (asumiendo que el archivo .py está en el mismo directorio)
+Cada método está encapsulado en su propia clase `Solver`. Para utilizarlos, simplemente instancie la clase correspondiente y llame al método `.solve()`.
 
+**Ejemplo (usando Newton-Raphson):**
+
+```python
+# 1. Importar las clases y herramientas necesarias
+# (Asumiendo que la clase está en un archivo llamado newton_raphson_solver.py)
 from newton_raphson_solver import NewtonRaphsonSolver
 from sympy import symbols, lambdify
 
-2. Definir el problema (f y f')
-x = symbols('x') f_expr = x3 - x - 2 fp_expr = 3*x2 - 1
+# 2. Definir el problema (f y f')
+x = symbols('x')
+f_expr = x**3 - x - 2
+fp_expr = 3*x**2 - 1
 
-f_func = lambdify(x, f_expr, 'math') fp_func = lambdify(x, fp_expr, 'math')
+# 3. Convertir las expresiones simbólicas en funciones de Python
+f_func = lambdify(x, f_expr, 'math')
+fp_func = lambdify(x, fp_expr, 'math')
 
-3. Crear el solver y resolver
-newton = NewtonRaphsonSolver(f=f_func, fp=fp_func) raiz = newton.solve(x0=2.0, tol=1e-7)
+# 4. Crear el solver y resolver
+newton = NewtonRaphsonSolver(f=f_func, fp=fp_func)
+raiz = newton.solve(x0=2.0, tol=1e-7)
 
-4. Reportar
-print(f"La raíz encontrada es: {raiz}") print(f"Se necesitaron {newton.iterations} iteraciones.")
+# 5. Reportar los resultados
+print(f"La raíz encontrada es: {raiz}")
+print(f"Se necesitaron {newton.iterations} iteraciones.")
 
-5. Graficar
+# 6. Graficar (opcional)
+# Esto mostrará los gráficos de convergencia y de las tangentes
 newton.plot_results()
 
 ## 🚀 Demos de Métodos
