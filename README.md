@@ -38,7 +38,7 @@ print(f"Se necesitaron {newton.iterations} iteraciones.")
 # 6. Graficar (opcional)
 # Esto mostrará los gráficos de convergencia y de las tangentes
 newton.plot_results()
-
+```
 ## 🚀 Demos de Métodos
 
 A continuación se encuentran los notebooks de demostración para cada método solicitado.
