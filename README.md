@@ -33,7 +33,7 @@ El método abierto fundamental. Requiere reescribir la ecuación f(x)=0 a la for
 
 El método abierto más potente. Utiliza la función f(x) y su derivada f'(x) para proyectar una línea tangente en cada iteración. Es conocido por su convergencia cuadrática (extremadamente rápida), aunque requiere el cálculo analítico de la derivada.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://docs.google.com/document/d/1rx0a1jCwzZ9SSd6w2etBNFZFZ9qM705Kqd0ENovpvWc/edit?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11kntQwyOEYB0groG5HQWV5LWTPPDu-GU)
 
 ### 5. Método [Secant]
 
