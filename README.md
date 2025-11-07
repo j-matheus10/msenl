@@ -6,6 +6,30 @@ Este repositorio presenta una biblioteca en Python, programada bajo el paradigma
 
 Todas las demostraciones están diseñadas para ejecutarse directamente en Google Colab, por lo que no se requiere instalación local
 ---
+## ⚙️ Estructura del Software (en cada Notebook)
+
+Dado que cada método se entrega como un notebook (.ipynb) autocontenido, la "biblioteca" y la "demostración" conviven en el mismo archivo.
+
+La estructura de cada notebook es la siguiente:
+
+Celda 1: Código Base (El Software)
+
+Esta es la celda superior que contiene todas las importaciones (numpy, matplotlib, etc.) y la definición completa de la clase Solver (ej. class NewtonRaphsonSolver:).
+
+Esta celda es, en efecto, nuestro software propuesto.
+
+Celda 2: Solucionador Interactivo (La Demo)
+
+Esta es la celda que contiene el script interactivo (input(), reportes, etc.) que utiliza la clase definida en la Celda 1.
+
+Cómo Utilizar el Software
+Para ejecutar o probar el software con nuevos datos, simplemente:
+
+Abra el notebook deseado en Google Colab usando los enlaces de la sección "Demos".
+
+Ejecute la Celda 1 (la que define la clase) una sola vez para cargar el solver en memoria.
+
+Ejecute la Celda 2 (la interactiva) y proporcione los datos solicitados (función, intervalo, etc.).
 
 ## 🚀 Demos de Métodos
 
@@ -53,8 +77,20 @@ El método "patrón oro" de los buscadores de raíces. Es un método híbrido qu
 f(x): x**3 - x - 2
 a : 1
 b : 2
-Iter: Prestablecido
+Iter: Tolerancia: 1e-7 (fija para ambos)
 #### False position
 <img width="975" height="780" alt="image" src="https://github.com/user-attachments/assets/799472bb-866b-49f4-9623-9d6b72b02777" />
+
 #### Bisection
 <img width="951" height="784" alt="image" src="https://github.com/user-attachments/assets/c7fa6298-0ccd-4cb3-aebb-d1b09e1936f7" />
+
+### Fixed Point v/s Secant
+Problema: Resolver $f(x) = e^{-x} - x$Método Fixed Point: Usa $g(x) = exp(-x)$Método Secant: Usa $f(x) = exp(-x) - x$
+Suposición inicial (x0): 0.5
+Suposición inicial (x1): 0.6
+
+#### Fixed Point
+<img width="959" height="713" alt="image" src="https://github.com/user-attachments/assets/74aafb66-76d0-4e75-9168-66db2ed1fef2" />
+
+#### Secant
+<img width="954" height="743" alt="image" src="https://github.com/user-attachments/assets/23a4f237-1629-4310-b65a-ba70b6f430ce" />
