@@ -6,39 +6,7 @@ Este repositorio presenta una biblioteca en Python, programada bajo el paradigma
 
 Todas las demostraciones están diseñadas para ejecutarse directamente en Google Colab, por lo que no se requiere instalación local
 ---
-## ⚙️ Uso Básico de la Biblioteca
 
-Cada método está encapsulado en su propia clase `Solver`. Para utilizarlos, simplemente instancie la clase correspondiente y llame al método `.solve()`.
-
-**Ejemplo (usando Newton-Raphson):**
-
-```python
-# 1. Importar las clases y herramientas necesarias
-# (Asumiendo que la clase está en un archivo llamado newton_raphson_solver.py)
-from newton_raphson_solver import NewtonRaphsonSolver
-from sympy import symbols, lambdify
-
-# 2. Definir el problema (f y f')
-x = symbols('x')
-f_expr = x**3 - x - 2
-fp_expr = 3*x**2 - 1
-
-# 3. Convertir las expresiones simbólicas en funciones de Python
-f_func = lambdify(x, f_expr, 'math')
-fp_func = lambdify(x, fp_expr, 'math')
-
-# 4. Crear el solver y resolver
-newton = NewtonRaphsonSolver(f=f_func, fp=fp_func)
-raiz = newton.solve(x0=2.0, tol=1e-7)
-
-# 5. Reportar los resultados
-print(f"La raíz encontrada es: {raiz}")
-print(f"Se necesitaron {newton.iterations} iteraciones.")
-
-# 6. Graficar (opcional)
-# Esto mostrará los gráficos de convergencia y de las tangentes
-newton.plot_results()
-```
 ## 🚀 Demos de Métodos
 
 A continuación se encuentran los notebooks de demostración para cada método solicitado.
@@ -47,36 +15,46 @@ A continuación se encuentran los notebooks de demostración para cada método s
 
 Un método de bracketing (cerrado) que garantiza la convergencia (lineal) al subdividir el intervalo a la mitad en cada iteración. Es el método más robusto, aunque su convergencia es lenta.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_1.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jyZGsyxJj7t7cbOkTvav4qktUrACT1-_)
 
 ### 2. Método [False position]
 
 Un método de bracketing mejorado. Utiliza una interpolación lineal (una "secante") entre los puntos (a, f(a)) y (b, f(b)) para encontrar la siguiente aproximación. Generalmente converge mucho más rápido que Bisección
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_2.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/10mJiyQZrLNuU_JKxrtw4Wb3dFnqEmGIM)
 
 ### 3. Método [Fixed Point]
 
 El método abierto fundamental. Requiere reescribir la ecuación f(x)=0 a la forma x=g(x). La raíz se encuentra iterando $x_{i+1} = g(x_i)$. Su convergencia (lineal) no está garantizada y depende críticamente de que la derivada $|g'(x)| < 1$ cerca de la raíz.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_3.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1VI0fNV0jC1jmPQSR0vnUbS0mH90diiAN)
 
 ### 4. Método [Newton Raphson]
 
 El método abierto más potente. Utiliza la función f(x) y su derivada f'(x) para proyectar una línea tangente en cada iteración. Es conocido por su convergencia cuadrática (extremadamente rápida), aunque requiere el cálculo analítico de la derivada.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_4.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://docs.google.com/document/d/1rx0a1jCwzZ9SSd6w2etBNFZFZ9qM705Kqd0ENovpvWc/edit?usp=sharing)
 
 ### 5. Método [Secant]
 
 Una modificación del método de Newton que evita el cálculo analítico de la derivada. En su lugar, aproxima la tangente usando una línea secante entre los dos puntos anteriores ($x_i$ y $x_{i-1}$). Ofrece una convergencia superlineal, casi tan rápida como la de Newton.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_5.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16apzRzK3VbRNOabfQDMtGsVqzefqmOQ2?usp=sharing)
 
 ### 6. Método [Brent]
 
 El método "patrón oro" de los buscadores de raíces. Es un método híbrido que combina la robustez de los métodos cerrados (Bisección) con la velocidad de los métodos abiertos (Secante e Interpolación Cuadrática Inversa). Comienza como un método rápido (Secante), pero monitorea activamente la convergencia. Si detecta que la convergencia es muy lenta o insegura, interviene y realiza un paso de Bisección (más lento pero 100% seguro) para garantizar el progreso.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/TU_REPOSITORIO/blob/main/demo/metodo_5.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qrd4gV9R3iodZU92pC9vGyr8AFufOkYn?usp=sharing)
 
 ## 🧐 Análisis comparativo
+
+### Bisection v/s False position
+f(x): x**3 - x - 2
+a : 1
+b : 2
+Iter: Prestablecido
+#### False position
+<img width="975" height="780" alt="image" src="https://github.com/user-attachments/assets/799472bb-866b-49f4-9623-9d6b72b02777" />
+#### Bisection
+<img width="951" height="784" alt="image" src="https://github.com/user-attachments/assets/c7fa6298-0ccd-4cb3-aebb-d1b09e1936f7" />
