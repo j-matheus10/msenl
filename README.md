@@ -97,3 +97,14 @@ Suposición inicial (x1): 0.6
 
 #### Secant
 <img width="954" height="743" alt="image" src="https://github.com/user-attachments/assets/23a4f237-1629-4310-b65a-ba70b6f430ce" />
+
+
+## 🛠️ Metodología de Desarrollo
+
+La lógica central y el análisis de los algoritmos numéricos fueron implementados por los autores. Se utilizaron asistentes de IA generativa como herramienta de apoyo para:
+
+* La optimización y refactorización del código de las clases `Solver`.
+* La creación de las interfaces interactivas (scripts de Celda 2) para las demostraciones.
+* Guia para crear el archivo colab para usar github de la forma esperada sin instalarlo.
+* Guia para comprender de mejor forma los métodos numéricos; a modo de método educativo.
+* Se excede de lo anteriormente dicho el método Newton Raphson.
