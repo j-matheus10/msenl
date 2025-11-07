@@ -39,37 +39,37 @@ A continuación se encuentran los notebooks de demostración para cada método s
 
 Un método de bracketing (cerrado) que garantiza la convergencia (lineal) al subdividir el intervalo a la mitad en cada iteración. Es el método más robusto, aunque su convergencia es lenta.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/j-matheus10/msenl/blob/main/demo/bisection_method.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jyZGsyxJj7t7cbOkTvav4qktUrACT1-_)
 
 ### 2. Método [False position]
 
 Un método de bracketing mejorado. Utiliza una interpolación lineal (una "secante") entre los puntos (a, f(a)) y (b, f(b)) para encontrar la siguiente aproximación. Generalmente converge mucho más rápido que Bisección
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/j-matheus10/msenl/blob/main/demo/false_position_method.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/10mJiyQZrLNuU_JKxrtw4Wb3dFnqEmGIM#scrollTo=4vmWGVcMs7SH)
 
 ### 3. Método [Fixed Point]
 
 El método abierto fundamental. Requiere reescribir la ecuación f(x)=0 a la forma x=g(x). La raíz se encuentra iterando $x_{i+1} = g(x_i)$. Su convergencia (lineal) no está garantizada y depende críticamente de que la derivada $|g'(x)| < 1$ cerca de la raíz.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/j-matheus10/msenl/blob/main/demo/fixed_point_method.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1VI0fNV0jC1jmPQSR0vnUbS0mH90diiAN)
 
 ### 4. Método [Newton Raphson]
 
 El método abierto más potente. Utiliza la función f(x) y su derivada f'(x) para proyectar una línea tangente en cada iteración. Es conocido por su convergencia cuadrática (extremadamente rápida), aunque requiere el cálculo analítico de la derivada.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/j-matheus10/msenl/blob/main/demo/newton_raphson_method.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11kntQwyOEYB0groG5HQWV5LWTPPDu-GU)
 
 ### 5. Método [Secant]
 
 Una modificación del método de Newton que evita el cálculo analítico de la derivada. En su lugar, aproxima la tangente usando una línea secante entre los dos puntos anteriores ($x_i$ y $x_{i-1}$). Ofrece una convergencia superlineal, casi tan rápida como la de Newton.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/j-matheus10/msenl/blob/main/demo/secant_method.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16apzRzK3VbRNOabfQDMtGsVqzefqmOQ2#scrollTo=SFHgkQo8ZExa)
 
 ### 6. Método [Brent]
 
 El método "patrón oro" de los buscadores de raíces. Es un método híbrido que combina la robustez de los métodos cerrados (Bisección) con la velocidad de los métodos abiertos (Secante e Interpolación Cuadrática Inversa). Comienza como un método rápido (Secante), pero monitorea activamente la convergencia. Si detecta que la convergencia es muy lenta o insegura, interviene y realiza un paso de Bisección (más lento pero 100% seguro) para garantizar el progreso.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/j-matheus10/msenl/blob/main/demo/brent_method.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qrd4gV9R3iodZU92pC9vGyr8AFufOkYn)
 
 ## 🧐 Análisis comparativo
 
