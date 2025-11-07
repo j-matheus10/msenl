@@ -85,7 +85,10 @@ Iter: Tolerancia: 1e-7 (fija para ambos)
 <img width="951" height="784" alt="image" src="https://github.com/user-attachments/assets/c7fa6298-0ccd-4cb3-aebb-d1b09e1936f7" />
 
 ### Fixed Point v/s Secant
-Problema: Resolver $f(x) = e^{-x} - x$Método Fixed Point: Usa $g(x) = exp(-x)$Método Secant: Usa $f(x) = exp(-x) - x$
+Problema: Resolver f(x) = e^{-x} - x 
+Método Fixed Point: Usa g(x) = exp(-x)
+Método Secant: Usa f(x) = exp(-x) - x$
+
 Suposición inicial (x0): 0.5
 Suposición inicial (x1): 0.6
 
